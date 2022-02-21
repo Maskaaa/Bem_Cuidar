@@ -1,0 +1,411 @@
+
+/* CAROSSEL EM CARTAS DE SERVCOS */
+html, body {
+  max-width: 100vw;
+  box-sizing: border-box;
+}
+ul {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+}
+#servicos {
+  box-sizing: border-box;
+  overflow: hidden;  
+}
+.conteiner {
+  width: 100%;
+  height: 70vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: -90px;
+}
+.carta {
+  width: 550px;
+  height: 520px;
+  box-shadow: 2px 10px 12px rgba(0, 0, 0, 0.5);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  box-sizing: border-box;
+  margin: 20px 1px;
+}
+.modelo {
+  height: 610px;
+  max-height: 100%;
+  max-width: 100%;
+  opacity: 0.7;
+}
+.detalhes {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 300px;
+}
+.detalhes p {
+  font-family: calibri;
+  font-weight: bold;
+  color: #6a6a74;
+  text-align: center;
+  margin-top: 20px;
+}
+.marvel {
+  position: absolute;
+  margin-top: 286px;
+  color: #FFF;
+  font-weight: bold;
+  letter-spacing: 2px;
+  font-family: bebeas kai ;
+  font-size: 25px;
+  opacity: 1;
+  text-align: center;
+}
+.logo {
+  position: absolute;
+  margin-top: -50px;
+}
+.lSPager {
+  visibility: hidden;
+}
+.carta:hover {
+  background-color: #181818;
+  transform-style: preserve-3d;
+  transform: scale(1.02);
+  transition: all ease 0.3s;
+  opacity: 1;
+}
+.carta:hover .marvel {
+  color: rgba(0, 85, 150, 0.823);
+  opacity: 1;
+  transition: all ease 0.5s;
+}
+.modelo:hover {
+  opacity: 1;
+}
+@media (max-width:720px) {
+.modelo {
+  width: 100%;
+}
+}
+
+/* FORMATACAO PAGINA */
+h1 {
+  margin-top: 120px;
+  color: #0A3958;
+}
+.srvc {
+  height: 270px;
+  margin: 95px 0px;
+}
+.srvc img {
+  width: 90%;
+  height: 300px;
+  border-radius: 10px;
+}
+.srvc2 img {
+  margin-top: 80px;
+  width: 90%;
+  height: 370px;
+  border-radius: 10px;
+}
+.srvc3 img {
+  margin-top: 80px;
+  width: 90%;
+  height: 420px;
+  border-radius: 10px;
+}
+.srvc h2 {
+  color: #0A3958;
+  text-transform: uppercase;
+  font-size: clamp(0.6vw, 1.45em, 4em);
+  margin-bottom: 15px;
+  padding-left: 10px;
+}
+
+.srvc p {
+  font-size: clamp(0.85em, 0.9vw, 1.5em);
+  /* font-size: 20px; */
+  padding: 10px;
+}
+
+.btnm {
+  width: 180px;
+  height: 60px;
+  cursor: pointer;
+  background: #1f6ebd;
+  border: 1px solid #91C9FF;
+  outline: none;
+  transition: 1s ease-in-out;
+  margin: 0px auto;
+  padding: 10px 20px;
+  border-radius: 25px 10px;
+  color: white;;
+}
+.btnm:hover {
+  transition: 1s ease-in-out;
+  background: rgb(22, 201, 37);
+}
+.btnm span {
+  color: white;
+  font-size: 18px;
+  font-weight: 100;
+}
+.verde li a {
+  color:#050505;
+  font-weight: 100;
+}
+
+/* === ANIMAÇÕES SCROLL ===*/
+[data-anime] {
+  opacity: 0;
+  transition: 0.4s;
+}
+[data-anime="left"] {
+  transform: translate3d(100px, 0, 0);
+  opacity: 0;
+}
+[data-anime="right"] {
+  transform: translate3d(-100px, 0, 0);
+  opacity: 0;
+}
+[data-anime].animate {
+  opacity: 1;
+  z-index: 0;
+  transform: translate3d(0, 0, 0);
+}
+[data-anime2].animates {
+    opacity: 1;
+    display: block;
+    z-index: 0;
+    transform: translate3d(0, 0, 0);
+}
+
+/* XG */
+@media (max-width: 1200px) {
+  .card_img{
+    width: 160px;
+    height:160px;
+  }
+  
+}
+@media (max-width: 1170px){
+
+  
+}
+@media (max-width: 1024px){
+}
+
+/* 1366x768 */
+@media (max-width: 768px) {
+
+}
+
+/* HD */
+@media (max-width: 720px) {
+}
+
+/* SM */
+@media (max-width: 575px) {
+}
+
+@media (max-width: 600px) {
+  h1 {
+    font-size: 7vw;
+  }
+  .carta {
+    width: 400px;
+    height: 420px;
+    box-shadow: 2px 10px 12px rgba(0, 0, 0, 0.5);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    box-sizing: border-box;
+    margin: 20px 1px;
+  }
+  [data-anime="left"] {
+    transform: translate3d(100px, 0, 0);
+    opacity: 0;
+  }
+  [data-anime="right"] {
+    transform: translate3d(-100px, 0, 0);
+    opacity: 0;
+  }
+  .srvc {
+    margin: 85px 0px 0px 0px;
+    text-align: center;
+  }
+  .srvc img {
+    width: 90%;
+    margin-top: -160px;
+    height: 300px;
+    border-radius: 10px;
+  }
+  .srvc2 img {
+    margin-top: -15px;
+    width: 100%;
+    height: 350px;
+    border-radius: 10px;
+  }
+  .srvc3 img {
+    margin-top: 15px;
+    width: 100%;
+  }
+  .mt25 {
+    margin-top: 125px;
+  }
+  .maistopo {
+    margin-top: 130px !important;
+  }
+  .maistopo2 {
+    margin-top: 160px !important;
+  }
+}
+
+/* MOTO G9 PLUS */
+@media (max-width: 432px) {
+  h1 {
+    font-size: 7vw;
+  }
+  .carta {
+    width: 400px;
+    height: 420px;
+  }
+  [data-anime="left"] {
+    transform: translate3d(100px, 0, 0);
+    opacity: 0;
+  }
+  [data-anime="right"] {
+    transform: translate3d(-100px, 0, 0);
+    opacity: 0;
+  }
+  .srvc {
+    margin: 85px 0px 0px 0px;
+    text-align: center;
+  }
+  .srvc img {
+    width: 90%;
+    margin-top: -160px;
+    height: 300px;
+    border-radius: 10px;
+  }
+  .srvc2 img {
+    margin-top: -15px;
+    width: 100%;
+    height: 350px;
+    border-radius: 10px;
+  }
+  .srvc3 img {
+    margin-top: 15px;
+    width: 100%;
+  }
+  #img_sonda  {
+    margin-top: -130px;
+  }
+  .mt25 {
+    margin-top: 125px;
+  }
+  .maistopo {
+    margin-top: 130px !important;
+  }
+  .maistopo2 {
+    margin-top: 160px !important;
+  }
+  div ul li a {
+    font-size: 0.7em;
+  }
+}
+@media (max-width: 414px) {
+  .carta {
+    width: 380px;
+    height: 400px;
+  }
+  .maistopo {
+    margin-top: 160px !important;
+  }
+  .srvc2 img {
+    margin-top: 30px;
+  }
+  #img_vacinacaoempresarial {
+    margin-top: -135px;
+  }
+  .srvc3 img {
+    margin-top: 25px;
+  }
+  #cadeirantes {
+    margin-top: 50px;
+  }
+  #img_fisio {
+    margin-top: -130px;
+  }
+}
+@media (max-width: 376px) {
+  .carta {
+    width: 340px;
+    height: 360px;
+  }
+  #img_acompanhantehospitalar,
+  #img_sonda  {
+    margin-top: -130px;
+  }
+  #img_pilates,
+  #img_cordena {
+    margin-top: 50px;
+  }
+  #img_vacinacaoempresarial,
+  #img_fisio,
+  #img_masso,
+  #img_vacina {
+    margin-top: -120px;
+  }
+  #cadeirantes {
+    margin-top: 90px;
+  }
+  div ul li a {
+    font-size: 0.6em;
+  }
+}
+
+@media (max-width: 320px) {
+  .carta {
+    width: 285px;
+    height: 320px;
+  }
+  .srvc h2 {
+    font-size: 1em;
+  }
+  .srvc img{
+    margin-top: -120px;
+  }
+  #img_acompanhantehospitalar,
+  #img_sonda,
+  #img_masso {
+    margin-top: -100px;
+  }
+  #img_vacinacaoempresarial,
+  #img_vacina {
+    margin-top: -90px;
+  }
+  #img_fisio {
+    margin-top: -60px;
+  }
+  #img_cordena {
+    margin-top: 90px;
+  }
+  #img_pilates,
+  #cadeirantes {
+    margin-top: 115px;
+  }
+  #img_planos {
+    margin-top: 55px;
+  }
+  .srvc3 img {
+    height: 320px;
+  }
+  div ul li a {
+    font-size: 0.49em;
+  }
+}
